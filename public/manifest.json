@@ -1,15 +1,18 @@
 {
   "short_name": "React App",
   "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "version": "1.0.1",
+  "author": "Austin Wolfe",
+  "description": "A simple chrome extension to combine momentum and google chrome top sites.",
+  "manifest_version": 2,
+  "icons": {
+    "16": "favicon.ico",
+    "48": "favicon.ico",
+    "128": "favicon.ico"
+  },
+  "permissions": ["topSites", "activeTab"],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-inline' https://apis.google.com; object-src 'self'"
 }

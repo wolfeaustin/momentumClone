@@ -3,11 +3,23 @@ import { Row, Col } from "antd";
 import Clock from "./Components/clock";
 import Weather from "./Components/weather";
 import Quote from "./Components/quote";
+import BackgroundPhoto from "./Images/galaxyBkgrd.jpg";
+import TopSites from "./Components/topSites";
 
 class App extends Component {
   render() {
     return (
-      <div style={{ height: "100vh", width: "100vw" }}>
+      <div
+        style={{
+          height: "100vh",
+          width: "100vw",
+          backgroundImage: `url(${BackgroundPhoto})`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          color: "white"
+        }}
+      >
         <Row type="flex" justify="end" style={{ height: "15vh" }}>
           <Col>
             <Weather />
@@ -21,6 +33,7 @@ class App extends Component {
         >
           <Col>
             <Clock />
+            <TopSites />
           </Col>
         </Row>
         <Row
